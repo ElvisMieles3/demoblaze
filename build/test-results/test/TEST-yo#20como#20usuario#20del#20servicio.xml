@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="yo como usuario del servicio" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-07-10T23:23:04" hostname="DESKTOP-GTQSEFK" time="0.045">
+  <properties/>
+  <testcase name="ingresar al sistema por primera vez" classname="yo como usuario del servicio" time="0.045">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
