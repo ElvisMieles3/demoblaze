@@ -16,8 +16,8 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 
-import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 
 public class ComprarStepDefinitions {
@@ -42,8 +42,9 @@ public class ComprarStepDefinitions {
         OnStage.theActorInTheSpotlight().attemptsTo(IngresarCompra.conDatos(datosCompra.get(0)));
     }
 
-    @Then("^el usuario debe ver el nombre Product added$")
-    public void elUsuarioDebeVerElNombreProductAdded() {
-
+    @Then("^el usuario debe ver el nombre (.*)$")
+    public void elUsuarioDebeVerElNombreProductAdded(String descripcionPoPup) {
+        theActorInTheSpotlight().should(seeThat(co.prueba.web.questions.IngresarCompra.mensaje(),
+                org.hamcrest.Matchers.is(descripcionPoPup)));
     }
 }

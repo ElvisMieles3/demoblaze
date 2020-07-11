@@ -15,4 +15,9 @@ public class IngresarCompra {
     public static final Target SELECCIONA_BOTON_AGREGAR_CARRITO = Target
             .the("Selecciona el botón de compra")
             .locatedBy("//*[text() ='Add to cart']");
+
+    public static final Target MENSAJE_RESPUESTA = Target
+            .the("Selecciona el botón de compra")
+            .locatedBy("//*[text() ='Add to cart']");
 }
+
