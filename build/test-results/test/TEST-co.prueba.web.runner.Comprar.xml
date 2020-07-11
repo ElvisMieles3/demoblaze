@@ -2,31 +2,9 @@
 <testsuite name="co.prueba.web.runner.Comprar" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="DESKTOP-GTQSEFK" time="0.0">
   <properties/>
   <system-out><![CDATA[
-1 Scenarios (?[33m1 undefined?[0m)
-3 Steps (?[33m3 undefined?[0m)
-0m0,552s
-
-
-You can implement missing steps with the snippets below:
-
-
-@Given("^que Elvis esta en el portal$")
-public void queElvisEstaEnElPortal() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException();
-}
-
-@When("^el seleciona el producto a comprar$")
-public void elSelecionaElProductoAComprar() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException();
-}
-
-@Then("^el usuario debe ver el nombre Product added$")
-public void elUsuarioDebeVerElNombreProductAdded() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException();
-}
+1 Scenarios (?[32m1 passed?[0m)
+3 Steps (?[32m3 passed?[0m)
+0m16,745s
 
 ]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
