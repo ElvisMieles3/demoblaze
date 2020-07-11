@@ -1,7 +1,9 @@
 package co.prueba.web.stepdefinitions;
 
 
+import co.prueba.web.models.DatosComprar;
 import co.prueba.web.tasks.AbrirNavegador;
+import co.prueba.web.tasks.IngresarCompra;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,6 +13,8 @@ import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
+
+import java.util.List;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -34,8 +38,8 @@ public class ComprarStepDefinitions {
     }
 
     @When("^el seleciona el producto a comprar$")
-    public void elSelecionaElProductoAComprar() {
-
+    public void elSelecionaElProductoAComprar(List<DatosComprar> datosCompra) {
+        OnStage.theActorInTheSpotlight().attemptsTo(IngresarCompra.conDatos(datosCompra.get(0)));
     }
 
     @Then("^el usuario debe ver el nombre Product added$")
