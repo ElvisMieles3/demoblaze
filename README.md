@@ -20,11 +20,11 @@ Para la ejecución de este proyecto desdemos tener presente que debemos tener in
       
 Ejecutando las pruebas ⚙️
  
-Para la ejecución del proyecto debe tener presente que las variables de entornos se encuentre bien configuradas, adicional debe tener las dependencias descargadas.
-El archivo pom.XML.
+Para la ejecución del proyecto debe tener presente que las variables de entornos se encuentre bien configuradas, adicional debe tener las dependencias descargadas que se encuentra en el archivo pom.XML.
 
-La prueba se puede ejecutar por medio de la clase Comprar, la cual esta ubicada en demoblaze\src\test\java\co\prueba\web\runner o por medio de la terminal del proyecto con el codigo mvn clean verify
+La prueba se puede ejecutar por medio de la clase Comprar, la cual esta ubicada en  src\test\java\co\prueba\web\runner o por medio de la terminal del proyecto con el codigo mvn clean verify
 
+Para observar las evidencias de las pruebas debemos ejecutar el script y ingresar a la ruta target\site\serenity , allí buscamos el primer archivo HTML que encontramos en la carpeta.
 
 Deuda tecnica.
 
