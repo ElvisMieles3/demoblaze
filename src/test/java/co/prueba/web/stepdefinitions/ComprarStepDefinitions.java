@@ -12,6 +12,7 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 
 import java.util.List;
@@ -34,6 +35,7 @@ public class ComprarStepDefinitions {
 
     @Given("^que Elvis esta en el portal$")
     public void queElvisEstaEnElPortal() {
+
         OnStage.theActorInTheSpotlight().wasAbleTo(AbrirNavegador.navegador());
     }
 
@@ -43,8 +45,13 @@ public class ComprarStepDefinitions {
     }
 
     @Then("^el usuario debe ver el nombre (.*)$")
-    public void elUsuarioDebeVerElNombreProductAdded(String descripcionPoPup) {
-        theActorInTheSpotlight().should(seeThat(co.prueba.web.questions.IngresarCompra.mensaje(),
+    public void elUsuarioDebeVerElNombreProductAdded(String descripcionPoPup) throws Exception {
+        Thread.sleep(2000);
+        Alert alert = miNavegador.switchTo().alert();
+        theActorInTheSpotlight().should(seeThat(co.prueba.web.questions.IngresarCompra.mensaje(alert.getText()),
                 org.hamcrest.Matchers.is(descripcionPoPup)));
+
+
+
     }
 }

@@ -5,23 +5,25 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
 
 
 public class IngresarCompra implements Question<String> {
-	
+	private String mensaje;
+
+	public IngresarCompra(String mensaje) {
+		super();
+		this.mensaje = mensaje;
+	}
 
 	@Override
 	public String answeredBy(Actor actor) {
-		actor.attemptsTo(WaitUntil.the((co.prueba.web.userinterfaces.IngresarCompra.MENSAJE_RESPUESTA), WebElementStateMatchers.isVisible()));
-        return Text.of(co.prueba.web.userinterfaces.IngresarCompra.MENSAJE_RESPUESTA).viewedBy(actor).asString();
-		
+
+		return this.mensaje;
 	}
 
-	public static IngresarCompra mensaje(){
-
-		return new IngresarCompra();
+	public static IngresarCompra mensaje(String mensaje){
+		return new IngresarCompra(mensaje);
 	}
-
-
-
 }
