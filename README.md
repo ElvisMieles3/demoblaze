@@ -19,7 +19,7 @@ Para la ejecución de este proyecto desdemos tener presente que debemos tener in
 -Chromedriver.exe
 -Serenity.properties.
       
-Ejecutando las pruebas ⚙️
+Ejecutando las pruebas ⌨️️
  
 Para la ejecución del proyecto debe tener presente que las variables de entornos se encuentre bien configuradas, adicional debe tener las dependencias descargadas que se encuentra en el archivo build.gradle.
 
